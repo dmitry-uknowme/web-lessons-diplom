@@ -1,0 +1,169 @@
+a {
+	text-decoration: none;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.header__title {
+	font-size: 3rem;
+	color: #212529;
+}
+
+.intro__title {
+	font-size: 3.5rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.intro__content {
+	margin-top: 3rem;
+	border-radius: 2em;
+	background: #212529;
+}
+
+.card-body {
+	max-height: 200px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.nav {
+}
+
+.nav__list {
+	position: relative;
+	padding: 1em;
+	padding-left: 0.5em;
+	margin: auto;
+}
+
+.nav__list::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.7);
+	width: 2px;
+	height: 100%;
+}
+
+.card {
+	margin-top: 30px;
+	padding-bottom: 20px;
+}
+
+.card > .btn {
+	width: 80%;
+	margin-left: 10%;
+}
+
+.card-number {
+	font-weight: 900;
+	font-size: 1.5rem;
+}
+
+.test {
+	transition: all 0.5s;
+	background: #0d6efd;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 10rem;
+	height: 100vh;
+}
+
+.test__title {
+	font-size: 60px;
+}
+
+.test__box {
+	max-width: 60%;
+	margin-top: 2rem;
+	border: 1px solid white;
+	border-radius: 2em;
+	padding: 2rem;
+}
+
+.test__ask {
+	font-size: 40px;
+}
+
+.test__answers {
+	margin-top: 3rem;
+	font-size: 15px;
+	list-style: upper-latin;
+}
+
+.test__answer-text {
+	display: inline;
+}
+
+.test-success {
+	color: limegreen;
+	width: fit-content;
+	margin: auto;
+	display: block;
+}
+
+.sources {
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 5rem;
+}
+
+.source__title {
+	text-align: center;
+	font-size: 3rem;
+	margin-top: 2rem;
+	padding-bottom: 1.5rem;
+}
+
+.source__list {
+}
+
+.source__list-item {
+	margin-top: 0.1em;
+	display: block;
+}
+
+.source__list-item_book {
+	color: crimson;
+}
+.source__list-item_web {
+	text-align: center;
+}
+
+.lesson {
+	background: mediumspringgreen;
+	padding: 2rem;
+}
+
+.lesson__text {
+	color: white;
+}
+
+.lesson p {
+	color: white;
+}
+
+.lesson img {
+	padding-top: 2rem;
+	margin: auto;
+	width: 80%;
+	display: block;
+}
+
+table {
+	border: 2px solid black;
+}
+
+td {
+	text-align: center;
+	border-width: 0.5px;
+}
