@@ -21,13 +21,33 @@ $lesson = mysqli_fetch_assoc($lesson_query);
     <div class="container-fluid">
         <div class="row">
             <?php include "./includes/navbar.php" ?>
-            <section class="lesson col-md-9">
+            <section class="lesson col-md-9 bg-primary">
                 <h2 class="lesson__title">
                     <?php echo $lesson['title'] ?>
                 </h2>
                 <p class="lesson__text">
                     <?php echo $lesson['body'] ?>
                 </p>
+                <section class="test" id="test" style="width: calc(100% + 4rem);margin-left: -2rem;margin-top:2rem">
+                    <h2 class="test__title" style="text-align: center;">Тест на тему: <br> <?php echo $lesson['title'] ?></h2>
+                    <div class="test__box">
+                        <div class="test__ask" data-count="5">Здесь будет вопроc</div>
+                        <ol class="test__answers">
+                            <li class="test__answer"><input type="radio" name="test" class="test__answer-input">
+                                <div class="test__answer-text">Вариант ответа 1</div>
+                            </li>
+                            <li class="test__answer"><input type="radio" name="test" class="test__answer-input">
+                                <div class="test__answer-text">Вариант ответа 2</div>
+                            </li>
+                            <li class="test__answer"><input type="radio" name="test" class="test__answer-input">
+                                <div class="test__answer-text">Вариант ответа 3</div>
+                            </li>
+                            <li class="test__answer"><input type="radio" name="test" class="test__answer-input">
+                                <div class="test__answer-text">Вариант ответа 4</div>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
             </section>
 
 
@@ -35,5 +55,6 @@ $lesson = mysqli_fetch_assoc($lesson_query);
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./index.js"></script>
 
 </html>

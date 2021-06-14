@@ -30,7 +30,7 @@
              </div>
          </li>
          <li class="mb-1 link-dark rounded">
-             <a class="btn btn-toggle align-items-center rounded" href="./#test">Тест</a>
+             <a class="btn btn-toggle align-items-center rounded" href="./#test">Финальный тест</a>
          </li>
          <li class="mb-1 link-dark rounded">
              <a class="btn btn-toggle align-items-center rounded" href="./#sources">Источники</a>

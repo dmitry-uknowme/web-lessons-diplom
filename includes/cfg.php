@@ -6,7 +6,7 @@ $cfg = array(
     'host' => 'localhost',
     'username' => 'dima',
     'password' => '123',
-    'name' => 'web-book-assembler',
+    'name' => 'web-assembler',
   )
 );
 

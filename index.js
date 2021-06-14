@@ -125,12 +125,14 @@ const testBg = document.querySelector('.test');
 let correctAnswersCount = 0;
 
 const setStage = (stageId) => {
+	const stageCount = parseInt(testQuestion.dataset['count']);
 	const randomNum = Math.floor(Math.random() * testData.length);
 	testQuestion.innerHTML = `${stageId}. ${testData[randomNum].question}`;
 	const rightAnswer = testData[randomNum].answers[0];
 
 	console.log(`---Вопрос ${stageId}---`);
 	console.log(`Правильный ответ:\n${rightAnswer}`);
+
 	let answerNums = [0, 1, 2, 3];
 	for (const [id, answer] of testAnswers.entries()) {
 		const answerInput = answer.children[0];
@@ -149,21 +151,33 @@ const setStage = (stageId) => {
 					.filter((q) => q !== '✔')
 					.join('');
 			}
-			if (stageId === testData.length) {
+			if (stageId === testData.length || stageId === stageCount) {
 				const testBox = document.querySelector('.test__box');
 				const testTitle = document.querySelector('.test__title');
 				let mark;
-				if (correctAnswersCount < 12) {
-					mark = 2;
-				} else if (12 < correctAnswersCount < 16) {
-					mark = 3;
-				} else if (18 > correctAnswersCount >= 16) {
-					mark = 4;
-				} else if (correctAnswersCount >= 18) {
-					mark = 5;
+				if (stageCount) {
+					if (correctAnswersCount <= 2) {
+						mark = 2;
+					} else if (correctAnswersCount === 3) {
+						mark = 3;
+					} else if (correctAnswersCount === 4) {
+						mark = 4;
+					} else if (correctAnswersCount === 5) {
+						mark = 5;
+					}
+				} else {
+					if (correctAnswersCount < 12) {
+						mark = 2;
+					} else if (12 < correctAnswersCount < 16) {
+						mark = 3;
+					} else if (18 > correctAnswersCount >= 16) {
+						mark = 4;
+					} else if (correctAnswersCount >= 18) {
+						mark = 5;
+					}
 				}
 				testBox.style.opacity = '0';
-				testTitle.innerHTML = `Тест пройден ${correctAnswersCount} правильных ответов из ${testData.length} вопросов. Оценка ${mark}`;
+				testTitle.innerHTML = `Тест пройден ${correctAnswersCount} правильных ответов из ${stageCount || testData.length} вопросов. Оценка ${mark}`;
 				testTitle.style.textAlign = 'center';
 			} else if (answerText.innerText.trim() === rightAnswer.trim()) {
 				testQuestion.innerHTML += '<div class="test-success"> ✔</div> ';

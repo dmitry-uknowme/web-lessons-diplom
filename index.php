@@ -48,7 +48,7 @@ $lessons = mysqli_query($connection, 'SELECT * FROM `lessons`');
 				</div>
 			</section>
 			<section class="test" id="test">
-				<h2 class="test__title">Тест</h2>
+				<h2 class="test__title">Финальный тест</h2>
 				<div class="test__box">
 					<div class="test__ask">Здесь будет вопроc</div>
 					<ol class="test__answers">

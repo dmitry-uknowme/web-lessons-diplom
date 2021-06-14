@@ -142,6 +142,7 @@ a {
 .lesson {
 	background: mediumspringgreen;
 	padding: 2rem;
+	padding-bottom: 0;
 }
 
 .lesson__text {
@@ -165,5 +166,13 @@ table {
 
 td {
 	text-align: center;
+	color: yellow;
 	border-width: 0.5px;
+	padding: 5px 10px;
+}
+
+code {
+	background: white;
+	padding: 5px 20px;
+	border-radius: 10px;
 }
